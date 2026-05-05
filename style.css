@@ -90,8 +90,11 @@ header{
     border: 1px #ee706b;
     border-radius: 0.4rem;
     margin: -0.5rem 0;
+    transition: 0.3s ease-in;
 }
-
+.btn-style1:hover{
+    opacity: 0.8;
+}
 .banner{
     background-color: #e9e7dd;
     max-width: 100%;
@@ -114,8 +117,11 @@ header{
     border: 1px #6d93e0;
     border-radius: 0.4rem;
     margin: 2rem 1.5rem 0 1rem;
+    transition: 0.3s ease-in;
 }
-
+.btn-style2:hover{
+    opacity: 0.7;
+}
 .menu-icon img{
     height: 4rem;
     width: 4rem;
@@ -126,7 +132,7 @@ header{
     width: 2rem;
 }
 
-.menu-icon img{
+.menu-icon img, .menu-icon{
     display: none;
     right: 2rem;
 }
@@ -230,9 +236,13 @@ header{
 }
 
 .about-me img{
-    height: 110vh;
-    width: 40%;
+    height: 100%;
+    width: 90%;
     border-radius: 2% 2% 5% 5%;
+}
+.about-me p{
+    font-size: 1.8rem;
+    line-height: 3rem;
 }
 /* price section */
 .price-list{
@@ -395,7 +405,7 @@ header{
 
 .contact-us img {
     height: 85vh;
-    width: 40%;
+    width: 90%;
 }
 input{
     width: 100%;
@@ -422,6 +432,10 @@ textarea::placeholder,input::placeholder{
     height: 45px;
     border: 1px solid #d86356;
     border-radius: 4px;
+    transition: 0.3s ease-in;
+}
+.btn-style3:hover {
+    opacity: 0.9;
 }
 /* My-contacts section */
 .my-contacts{
@@ -486,14 +500,14 @@ footer{
         padding: 0 1.5rem;
     }
     .menu li{
-            margin: 0.9rem;
-        }
+        margin: 0.9rem;
+    }
     .banner  h1{
         font-size: 4.5rem;
     }
 
     .my-jobs h2 {
-            font-size: 4.5rem;
+        font-size: 4.5rem;
         }
     #job-icon1 {
         height: 4.5rem;
@@ -516,8 +530,8 @@ footer{
         font-size: 2.8rem;
     }
     .contact-us img {
-    height: 82vh;
-    width: 50vw;
+        height: 82vh;
+        width: 50vw;
     }
     .contact-us h2{
         font-size: 4.5rem;
@@ -535,7 +549,11 @@ footer{
     .menu .nav-links{
         display: none;
     }
-    .menu-icon img{
+    .menu-icon {
+        background: transparent;
+        border: none;
+    }
+    .menu-icon, .menu-icon img{
         display: block;
     }
     .d-flex {
@@ -557,9 +575,12 @@ footer{
         line-height: 4.5rem;
     }
     #job-icon1 {
-    height: 3rem;
-    width: 3rem;
-    margin: 0 0 12.5rem 3rem;
+        height: 3rem;
+        width: 3rem;
+        margin: 0 0 12.5rem 3rem;
+    }
+    .my-works {
+        padding: 6rem 4rem 13rem;
     }
     .my-works h2{
         font-size: 4rem;
@@ -571,8 +592,12 @@ footer{
         font-size: 2.8rem;
     }
     .about-me img{
-        height: 50vh;
-        width: 45%;
+        height: 100%;
+        width: 90%;
+    }
+    .about-me p{
+        font-size: 1.4rem;
+        line-height: 2rem;
     }
     .prices h2{
         font-size: 2.8rem;
@@ -581,7 +606,7 @@ footer{
         font-size: 6rem;
     }
     .prices{
-        padding: 4.5rem 3.5rem;
+        padding: 4.5rem 2.5rem;
         margin: 5rem 1rem;
     }
     .question-icon img{
@@ -589,18 +614,20 @@ footer{
         width: 2rem;
     }
     .questions p {
-        line-height: 3.5rem;
+        line-height: 2rem;
+        font-size: 1.5rem;
+        margin: 0.5rem;
     }
    .contact-us img {
-    height: 30vh;
-    width: 45vw;
+        height: 100%;
+        width: 90%;
     }
     .contact-us p {
-    margin-top: 2.5rem;
+        margin-top: 2.5rem;
     }
     .contact-us-left {
-    max-width: 50%;
-    padding: 10px 45px;
+        max-width: 50%;
+        padding: 1rem 4.5rem;
     }
     input{
         height: 3rem;
@@ -609,7 +636,7 @@ footer{
         width: 100%;
     }
 }
-@media only screen and (min-width: 576) and (max-width: 767px){
+@media only screen and (min-width: 576px) and (max-width: 767px){
     .container{
         max-width: 100%;
         padding: 0 1rem;
@@ -618,9 +645,128 @@ footer{
     .menu .nav-links{
         display: none;
     }
+    .d-flex {
+        justify-content: space-between;
+    }
+    .menu-icon img, .menu-icon{
+        display: block;
+    }
+    .menu-icon {
+        background: transparent;
+        border: none;
+    }
     .banner h1 {
-    font-size: 4rem;
-    line-height: 4.5rem;
+        font-size: 4rem;
+        line-height: 4rem;
+        padding: 1.2rem;
+    }
+    
+    .banner p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    .my-jobs h2{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    .btn-style1, .btn-style2, .btn-style3 {
+        font-size: 1.2rem;
+        margin: 1.5rem 1rem;
+    }
+    .my-jobs{
+        margin: 2rem 0;
+        padding: 2rem 0;
+    }
+    #job-icon1 {
+        height: 4rem;
+        width: 6rem;        
+    }
+    .my-jobs-content p {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+    .my-works h2{
+        font-size: 4rem;
+    }
+    .my-works p{
+        font-size: 2.5rem;
+    }
+    .my-works {
+        padding: 6rem 6rem 13rem;
+    }
+    .about-me h2{
+        font-size: 4.5rem;
+    }
+    .about-me img{
+        height: 100%;
+        width: 100%;
+        border-radius: 2rem;
+    }
+    .about-me p {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+    }
+    .prices {
+        padding: 4.5rem 0.1rem;
+        margin: 5rem 1rem;
+    }
+    .prices h2{
+        font-size: 2.8rem;
+    }
+    .prices h3{
+        font-size: 6rem;
+    }
+    .clients {
+        box-shadow: 0 0 0 2rem #fff;
+        padding: 3rem 1rem;
+        margin: 5rem 1rem;
+        line-height: 2.5rem;
+    }
+    .clients h3{
+        line-height: 3rem;
+        padding: 1rem;
+    }
+    .testimony h2{
+        font-size: 4rem;
+    }
+    .testimony img {
+        padding: 3rem;
+        height: 100%;
+        width: 50%;
+    }
+    .testimony p{
+        margin: 0 5rem 3rem;
+    }
+    .contact-us h2, .asked-questions h2{
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    .asked-questions p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin: 0.5rem 0;
+    }
+    .FAQ-answers p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .contact-us-left{
+        padding: 1rem 2.5rem;
+    }
+    .contact-us img {
+        height: 98%;
+        width: 100%;
+    }
+    .contact-us p{
+        font-size: 1.4rem;
+        margin: 2.5rem 0;
+    }
+    textarea{
+        width: 100%;
+    }
+    .contact-content h3 {
+    font-size: 3rem;
+    line-height: 3rem;
     }
 }
 @media only screen and (max-width: 575px){
@@ -631,15 +777,19 @@ footer{
     .menu .nav-links{
         display: none;
     }
-    .menu-icon img{
+    .menu-icon img, .menu-icon{
         display: block;
+    }
+    .menu-icon {
+        background: transparent;
+        border: none;
     }
     .d-flex {
         justify-content: space-between;
     }
     .banner img{
-        height: 100vh;
-        width: 50vw;
+        height: 100%;
+        width: 100%;
     }
     .banner h1 {
         font-size: 2rem;
@@ -661,6 +811,7 @@ footer{
     }
     .my-jobs h2 {
         font-size: 2.5rem;
+        line-height: 2rem;
     }
     .my-jobs p{
         font-size: 1.2rem;
@@ -675,7 +826,7 @@ footer{
     .my-jobs {
         margin: 1rem 0;
         padding: 1rem 0;
-        line-height: 1.5rem;
+        line-height: 0.5rem;
     }
     .my-jobs h4 {
         font-size: 1.3rem;
@@ -692,14 +843,9 @@ footer{
     .my-works p {
         font-size: 1.2rem;
     }
-    .clients{
-        padding: 0 1rem;
-    }
-    .clients h3 {
-        font-size: 1.8rem;
-    }
+    
     .about-me img {
-        height: 100vh;
+        height: 100%;
         width: 100%;
     }
     .prices h2 {
@@ -709,35 +855,27 @@ footer{
         font-size: 4rem;
     }
     .prices {
-        padding: 4.5rem 1.5rem;
+        padding: 2.5rem 0.5rem;
         margin: 5rem 0.5rem;
     }
     .question-icon img {
-        height: 1.5rem;
-        width: 2rem;
+        height: 200%;
+        width: 200%;
     }
     .questions p {
         font-size: 1.3rem;
         line-height: 2rem;
     }
-   .contact-us img {
-        height: 30vh;
-        width: 100%;
-        }
-        .about-me h2 {
+    .about-me h2 {
         font-size: 3rem;
         margin: 1rem 0 1rem;
     }
     .about-me p{
         font-size: 1rem;
-        line-height: 2rem;
+        line-height: 1.2rem;
     }
     .price-list {
         line-height: 3rem;
-    }
-    .prices {
-        padding: 3.5rem 1.5rem;
-        margin: 1rem 0.5rem;
     }
     .prices p{
         font-size: 1.3rem;
@@ -753,7 +891,14 @@ footer{
     .clients p {
         font-size: 1.2rem;
         padding: 0 1rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .clients{
+        padding: 0;
+    }
+    .clients h3 {
+        font-size: 1.8rem;
     }
     .testimony{
         margin: 0 3rem;
@@ -772,13 +917,13 @@ footer{
     }
     .asked-questions h2 {
         font-size: 3rem;
-        line-height: 3.5rem;
+        line-height: 2.6rem;
         margin: 3rem 0;
     }
     .FAQ-answers {
     padding-bottom: 1rem;
     }
-        .contact-us-left {
+    .contact-us-left {
         padding: 1rem 1.5rem;
     }
     .contact-us h2 {
@@ -790,8 +935,8 @@ footer{
         margin: 1rem 0;
     }
     .contact-us img {
-        height: 50vh;
-        width: 50vw;
+        height: 70%;
+        width: 100%;
     }
     textarea{
         height: 20%;
