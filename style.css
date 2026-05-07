@@ -25,6 +25,9 @@ section{
 header{
     height: 6.5rem;
     padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 .d-flex{
     display: flex;
@@ -64,6 +67,72 @@ header{
 .menu li a:hover{
     opacity: 0.8;
 }
+
+.mobile{
+    display: none;
+    position: absolute;
+    top: 6.5rem;
+    right: 2rem;
+    background-color: rgba(238, 153, 238, 0.233);
+    backdrop-filter: blur(20px);
+    border-radius: 5px;
+    padding: 0;
+    opacity: 0.7;
+    z-index: 999;
+    overflow: hidden;
+    width: 30rem;
+    text-align: center;
+    height: 0;
+    transition: height 0.5s ease-in-out;
+}
+.mobile-menu li{
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.mobile-menu li a{
+    color: #34393f;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+.mobile-menu li a:hover{
+    opacity: 0.3;
+}
+.mobile-menu .btn-style1{
+    width: 100%;
+}
+.mobile.active{
+    height: 19rem;
+}
+.menu-icon img{
+    display:none;
+    height: 4rem;
+    width: 4rem;
+}
+
+.close-icon img{
+    margin: 1rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.close-icon {
+    display: none;
+    background: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+.menu-icon {
+    display: none;
+    background: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+
 /* banner section  */
 .banner-img{
     max-width: 50%;
@@ -122,32 +191,12 @@ header{
 .btn-style2:hover{
     opacity: 0.7;
 }
-.menu-icon img{
-    height: 4rem;
-    width: 4rem;
-}
-
-.close-icon img{
-    height: 2rem;
-    width: 2rem;
-}
-
-.menu-icon img, .menu-icon{
-    display: none;
-    right: 2rem;
-}
-.close-icon img{
-    display: none;
-}
 
 .btn-style1 a, .btn-style2 a {
     text-decoration: none;
     color: #fff;
 }
 
-.mobile {
-    display: none;
-}
 /* my jobs section  */
 .my-jobs{
     margin: 5rem 0;
@@ -404,7 +453,7 @@ header{
 }
 
 .contact-us img {
-    height: 85vh;
+    height: 100%;
     width: 90%;
 }
 input{
@@ -484,14 +533,6 @@ footer{
     color: white;
     text-align: center;
 }
-/* toggle components */
-.hidden{ 
-  display: none;
-}
-
-.active{
-  display: block;
-}
 
 /* Responsive Design */
 @media only screen and (min-width: 992px) and (max-width: 1199px){
@@ -514,8 +555,8 @@ footer{
         width: 45rem;
         }
     .about-me img{
-        height: 100vh;
-        width: 80vw;
+        height: 100%;
+        width: 100%;
     }
 
     .about-me p {
@@ -530,8 +571,8 @@ footer{
         font-size: 2.8rem;
     }
     .contact-us img {
-        height: 82vh;
-        width: 50vw;
+        height: 100%;
+        width: 100%;
     }
     .contact-us h2{
         font-size: 4.5rem;
@@ -550,10 +591,15 @@ footer{
         display: none;
     }
     .menu-icon {
+        display: block;
         background: transparent;
         border: none;
     }
-    .menu-icon, .menu-icon img{
+    .menu-icon img{
+        display: block;
+    }
+
+    .mobile {
         display: block;
     }
     .d-flex {
@@ -578,6 +624,10 @@ footer{
         height: 3rem;
         width: 3rem;
         margin: 0 0 12.5rem 3rem;
+    }
+    .my-jobs {
+        margin: 3rem 0;
+        padding: 2rem 0;
     }
     .my-works {
         padding: 6rem 4rem 13rem;
@@ -648,12 +698,16 @@ footer{
     .d-flex {
         justify-content: space-between;
     }
-    .menu-icon img, .menu-icon{
+    .menu-icon img{
         display: block;
     }
     .menu-icon {
+        display: block;
         background: transparent;
         border: none;
+    }
+    .mobile {
+        display: block;
     }
     .banner h1 {
         font-size: 4rem;
@@ -777,13 +831,24 @@ footer{
     .menu .nav-links{
         display: none;
     }
-    .menu-icon img, .menu-icon{
+    .menu-icon img{
         display: block;
     }
     .menu-icon {
+        display: block;
         background: transparent;
         border: none;
     }
+    .close-icon img {
+        margin: 2rem 2rem;
+        height: 2rem;
+        width: 2rem;
+    }
+    .mobile {
+        display: block;
+        width: 100%;
+    }
+
     .d-flex {
         justify-content: space-between;
     }
@@ -793,12 +858,13 @@ footer{
     }
     .banner h1 {
         font-size: 2rem;
-        line-height: 3rem;
-        margin: 1rem 0.5rem;
+        line-height: 2.5rem;
+        margin: 3rem 0.5rem 2rem;
     }
     .banner p {
         font-size: 1.1rem;
         line-height: 1.5rem;
+        padding: 1rem;
     }
     .btn-style1, .btn-style2 {
         font-size: 1rem;
@@ -847,6 +913,10 @@ footer{
     .about-me img {
         height: 100%;
         width: 100%;
+    }
+    .prices .d-flex {
+        flex-direction: column;
+        align-items: center;
     }
     .prices h2 {
         font-size: 1.8rem;
